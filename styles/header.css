@@ -1,0 +1,256 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+ a:link {
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:hover {
+    color: black;
+}
+a:active {
+    color: black;
+}
+a:link,a:visited {
+    text-decoration: none;
+}
+.menu-container{
+    display:flex;
+    align-items: center;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 0 16px;
+    height: 50px;
+}
+
+.menu-head {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position:relative;
+}
+.left-side-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.center-menu{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.center-menu a{
+    height: 40px;
+}
+.center-img{
+    width:  140px;
+    height: 40px;
+}
+.right-side-menu {
+    display:flex;
+    justify-content: end;
+    align-content: center;
+ }
+.right-img{
+    width:  30px;
+    height: 30px;
+}
+
+.left-element {
+    display: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+.left-element:hover{
+    display: none;
+}
+
+
+.shrink-element{
+    align-content: center;
+    display: flex;
+    cursor:pointer;
+}
+.menu-button{
+    width: 100%;
+    height: 100%;
+}
+.red-dot{
+    display: none;
+    height: 4px;
+    width: 4px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 3px;
+    align-self: center ;
+}
+.head-dot{
+    display: none;
+    height: 4px;
+    width: 4px;
+    background-color:#090909;
+    border-radius: 50%;
+    margin-right: 3px;
+    align-self: center ;
+}
+.right-element {
+
+}
+
+.sub-menu-container {
+    display:flex;
+    align-items: center;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 0 16px;
+    height: 30px;
+}
+.sub-menu-head {
+    display: flex;
+    margin: 0 auto;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+    overflow-x: hidden ;
+}
+.list{
+    display:none;
+    position: absolute;
+    width: 220px;
+    list-style-type: none;
+    background-color: #fff;
+}
+.sub-element{
+    font-size: 11px;
+    font-weight: bold;
+}
+.sub-element:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.center-img:hover{
+    cursor: pointer;
+}
+.right-img:hover{
+    cursor: pointer;
+}
+.left-element a{
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width: 1000px) {
+    .menu-container{
+    height: 60px;
+    margin: 0;
+    max-width: 100%;
+    }
+    .menu-head{
+        margin: auto;
+        max-width: 960px;
+        justify-content: normal;
+    }
+    .left-side-menu{
+        width: 320px;
+        justify-content: start;
+        height: 40px;
+    }
+    .center-menu{
+        width: 320px;
+        display: flex;
+        justify-content: center;
+    }
+    .right-side-menu{
+        width: 320px;
+        justify-content: right;
+    }
+    .sub-menu-container{
+        margin: 0;
+        max-width: 100%;
+    }
+    .sub-menu-head{
+        margin: auto;
+        max-width: 960px;
+    }
+
+    .left-element {
+        display: inline-flex;
+        cursor: pointer;
+        padding: 20px 0;
+    }
+    .head-dot{
+        display: inline-block;
+    }
+    .shrink-element{
+        display:none;
+    }
+    .left-element:hover{
+        display:inline-flex;
+        text-decoration: underline;
+    }
+
+    .left-element:hover .list{
+        display: grid;
+        border: 1px solid #E8E8E8;
+        grid-template-columns: 95px 95px;
+        column-gap: 10px ;
+        padding: 10px 10px;
+        margin-top: 20px;
+        z-index: 100;
+        border-radius: 3%;
+    }
+    .list-element{
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .left-element .list:hover + .list-element{
+        display:inline-grid;
+    }
+    .left-element .list:hover > .list-element a{
+        display:inline-grid;
+    }
+    .red-dot{
+        display: inline-block;
+    }
+    .list-element{
+        padding: 7px 5px;
+    }
+    .list-element:hover{
+        background-color: lightgrey;
+        border-radius: 5%;
+    }
+    .last-element{
+        height: 54px;
+    }
+
+}
+@media screen and (min-width: 1330px) {
+    .menu-head{
+        max-width: 1290px;
+    }
+    .sub-menu-head{
+        max-width: 1290px;
+    }
+    .left-side-menu{
+        width: 430px;
+        justify-content: start;
+    }
+    .center-menu{
+        width: 430px;
+        display: flex;
+        justify-content: center;
+    }
+    .right-side-menu{
+        width: 430px;
+        justify-content: right;
+    }
+}
+
+

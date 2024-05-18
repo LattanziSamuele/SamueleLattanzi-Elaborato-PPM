@@ -1,0 +1,104 @@
+.footer-container{
+    display:flex;
+    align-items: center;
+    padding: 40px 16px 40px 16px;
+    height: auto;
+    margin-top: 12px;
+    background-color: black;
+    color: white;
+}
+.footer-box{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.foot-head{
+    margin: 5px auto;
+}
+.foot-img{
+    width: 100%;
+    height: 100%;
+}
+.foot-description{
+    align-self: center;
+    font-size: 11px;
+    margin: 9px auto;
+}
+.foot-list{
+    display: flex;
+    margin-top: 13px;
+}
+.first-list, .second-list{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.foot-element{
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.icons{
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    margin-top: 15px ;
+}
+.img-icon{
+    padding: 5px;
+    background-color: rgb(40,40,40);
+    border-radius: 50%;
+}
+.foot-element:hover{
+    cursor: pointer;
+}
+.img-icon:hover{
+    cursor: pointer;
+}
+#foot  a:link {
+    color: white;
+}
+#foot a:visited{
+    color: white;
+}
+#foot a:hover {
+    color: white;
+}
+#foot a:active {
+    color: white;
+}
+
+@media screen and (min-width: 1000px){
+    .footer-container{
+        margin: 25px 0 0 0;
+        max-width: 100%;
+        padding-top: 55px;
+        padding-bottom: 55px;
+
+    }
+    .footer-box{
+        margin: auto;
+        max-width: 960px;
+    }
+    .foot-head{
+        width: 140px;
+        height: 36px;
+    }
+    .foot-img{
+        width: 140px;
+        height: 36px;
+        object-fit: cover;
+    }
+    .foot-list{
+        display: flex;
+        gap: 40px;
+    }
+    .first-list, .second-list{
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

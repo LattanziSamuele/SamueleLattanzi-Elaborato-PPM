@@ -1,0 +1,335 @@
+.video-container{
+    background-color: black;
+    color: white;
+    height: auto;
+    padding-bottom: 16px;
+}
+.video-grid{
+    height: auto;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.video-category{
+    display: none;
+}
+.main-video{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.big-video {
+    width: 100%;
+    height: 280px;
+}
+.video{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.video-title{
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+}
+.live-tag{
+    padding: 6px 10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: fit-content;
+    border-radius: 10%;
+    display: none;
+    margin-top: 10px;
+}
+#first-video .live-tag{
+    display: block;
+}
+.video-name{
+    font-weight: bold;
+    font-size: 23px;
+    margin: 5px 0 5px 0;
+}
+.video-description{
+    font-size: 15px;
+    margin: 0;
+    display: none;
+}
+.video-time{
+    font-size: 11px;
+    font-weight:lighter ;
+    margin: 5px 0;
+}
+.video-time span{
+    margin-left: 15px;
+}
+.other-videos-container{
+    padding: 0 16px;
+    overflow-x: hidden;
+}
+.other-videos{
+    display: flex;
+    margin: 10px 0;
+    gap: 20px;
+    overflow-x: scroll;
+}
+.related-video{
+    width: 170px;
+    flex: 1;
+}
+.video-info h1{
+    font-size: 12px;
+    font-weight: bold;
+}
+.video-info p{
+    font-size: 11px;
+    font-weight: lighter;
+}
+.video-length{
+    margin-left: 15px;
+}
+.small-video{
+}
+.small-v{
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+video::-webkit-media-controls-timeline{
+    display: none;
+}
+.more-videos{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E8E8E8;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-right:16px ;
+    margin-left:16px ;
+    font-weight: bold;
+}
+.more-videos span{
+    margin-left: 4px;
+}
+.blank-down{
+    display: none;
+    padding: 30px;
+    margin: 0;
+    border-bottom: 1px solid #E8E8E8;
+}
+.video-title a:hover{
+    cursor:pointer;
+}
+.video-title a:hover > .video-name{
+    text-decoration: underline;
+}
+.related-video:hover{
+    cursor: pointer;
+}
+.related-video:hover >.video-info h1 {
+    text-decoration: underline;
+}
+.more-videos:hover{
+    cursor: pointer;
+}
+.video-category span:hover{
+    cursor: pointer;
+}
+.video-container  a:link {
+    color: white;
+}
+.video-container a:visited{
+    color: white;
+}
+.video-container  a:hover {
+    color: white;
+}
+.video-container a:active {
+    color: white;
+}
+
+
+@media screen and (min-width: 750px){
+    .main-video{
+        position: relative;
+    }
+    .video-title{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+    }
+    .video-name{
+        font-size: 38px;
+    }
+    .big-video{
+        height: 340px;
+    }
+    .video{
+        height: 340px;
+    }
+    .other-videos-container{
+        overflow-x: hidden;
+    }
+    .other-videos{
+        margin-top: 20px ;
+        overflow-x: hidden;
+        display: flex;
+    }
+    .related-video{
+    }
+    .blank-down{
+        display: block
+    }
+}
+@media  screen and (min-width: 1000px){
+    .more-videos{
+        display: none;
+    }
+    .video-container{
+        margin: 25px 0 0 0;
+        max-width: 100%;
+    }
+    #second-video .video-container{
+        background-color: #19409D;
+    }
+    #third-video .video-container{
+        background-color: darkorange;
+    }
+    #fourth-video .video-container{
+        background-color: darkred;
+    }
+    .video-grid{
+        margin: auto;
+        max-width: 960px;
+        grid-template-columns: repeat(4,216px);
+        grid-column-gap: 32px;
+        grid-row-gap: 10px;
+    }
+    .video-category{
+        display: block;
+        grid-column: 1 / span 4;
+        grid-row: 1;
+        margin: 18px 0;
+        font-size: 39px;
+        font-weight: bold;
+    }
+    .video-category span{
+        margin-left: 8px;
+        font-size: 13px;
+    }
+    .main-video{
+        grid-column: 1 / span 4;
+        grid-row: 2/ span 2;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+    .big-video{
+        width: 712px;
+        height: auto;
+    }
+    .video-title{
+        position: relative;
+        padding: 0;
+        width: 216px;
+    }
+    .video-name{
+        font-size: 24px ;
+    }
+    .video{
+        width: 712px;
+        height: auto;
+    }
+    .other-videos-container{
+        grid-column: 1 / span 4;
+        grid-row: 4;
+        padding: 0;
+        margin: 0;
+    }
+    .other-videos{
+        display: flex;
+        gap: 32px;
+        justify-content: normal;
+    }
+    .related-video{
+        width: 216px;
+        flex: none;
+    }
+    .small-video{
+        width: 216px;
+    }
+    .small-v{
+        width: 216px;
+        object-fit: cover;
+    }
+    .video-info h1{
+        font-size: 17px;
+    }
+    .video-description{
+        font-size: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.40;
+        margin-bottom: 10px;
+    }
+    .live-tag{
+        margin-top: 0;
+        margin-bottom:  5px;
+    }
+    .video-name{
+        margin-top:0;
+        margin-bottom: 10px;
+    }
+
+}
+@media screen and (min-width: 1330px) {
+    .video-grid{
+        max-width: 1290px;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 30px;
+    }
+    .big-video{
+        width: 960px;
+    }
+    .video-title{
+        position: relative;
+        padding: 0;
+        width: 300px;
+    }
+    .main-video{
+        gap: 30px;
+    }
+    .other-videos{
+        gap: 30px;
+    }
+    .video{
+        width: 960px;
+    }
+    .related-video{
+        width: 300px;
+    }
+    .small-video{
+        width: 300px;
+    }
+    .small-v{
+        width: 300px;
+        object-fit: cover;
+    }
+    .video-name{
+        font-size: 30px ;
+    }
+    .video-info h1{
+        font-size: 24px;
+    }
+    .video-description{
+        -webkit-line-clamp: 10;
+    }
+    .video-category{
+        font-size: 45px;
+    }
+}

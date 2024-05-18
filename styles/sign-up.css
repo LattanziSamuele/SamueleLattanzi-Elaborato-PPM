@@ -1,0 +1,165 @@
+.sign-container{
+    display:flex;
+    align-items: center;
+    padding: 0 16px 5px 16px;
+    height: auto;
+    margin-top: 12px;
+}
+.sign-flex{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sign-title h2{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+.sign-title p{
+    display: none;
+}
+.email-box{
+    display:flex;
+    width: 100%;
+}
+
+.input-box{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.input-bar{
+    flex: 1;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 3px;
+    width: 100%;
+    padding: 0 13px;
+    margin: 0;
+    align-self: start;
+}
+.email-box .email-img{
+    display: none;
+}
+.text-bar{
+    padding: 10px;
+}
+.button{
+    display: flex;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border: none;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    font-size: 16px;
+}
+.terms p{
+    font-weight: lighter;
+    font-size: 11px;
+    margin-top: 5px;
+    color: gray;
+}
+.check-text p{
+    font-weight: lighter;
+    font-size: 11px;
+    margin-top: 5px;
+    color: gray;
+}
+.check-text p{
+    margin-top: 0 ;
+}
+.check-box{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: start;
+}
+.check-button{
+    margin: 0;
+}
+.check-button:hover{
+    cursor: pointer;
+}
+.button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+.click-term{
+    text-decoration: underline;
+}
+.click-term:hover{
+    color:black
+}
+.new-updates{
+    display: none;
+}
+@media screen and (min-width:  600px){
+    .sign-title{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sign-title p{
+        display: block;
+        font-size: 18px;
+        text-align: center;
+        margin: 0 0 15px 0;
+    }
+    .email-box .email-img{
+        display: block;
+        width: 100px;
+        height: 100px;
+    }
+    .email-img img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    .email-box{
+        max-width: 550px;
+        align-self: center;
+        gap: 10px;
+    }
+    .input-bar{
+        height: 50px;
+        font-size: 16px;
+    }
+    .button{
+        height: 50px;
+        font-size: 16px;
+        width: 110px;
+    }
+    .terms p{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width:  750px){
+    .email-box{
+        max-width: 600px;
+    }
+    .new-updates{
+        display: block;
+        margin: 10px auto;
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .new-updates:hover{
+        cursor: pointer;
+    }
+}
+@media screen and (min-width: 880px){
+    .sign-title h2{
+        font-size:45px;
+        margin-bottom: 5px;
+        font-weight: bolder;
+
+    }
+}
